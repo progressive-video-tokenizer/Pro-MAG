@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class=" w-mod-ix">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style>
+        .wf-force-outline-none[tabindex="-1"]:focus {
+            outline: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNGS4SZ3C7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WNGS4SZ3C7');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Progressive Growing of Video Tokenizers for Highly Compressed Latent Spaces</title>
+    <link rel="stylesheet" href="images/bootstrap.min.css">
+    <link href="images/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="images/Highlight-Clean.css">
+    <link rel="stylesheet" href="images/styles.css">
+
+    <link rel="manifest" href="images/site.webmanifest">
+
+    <script src="images/video_comparison.js"></script>
+    <script type="module" src="images/model-viewer.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <!-- <div class="banner">
+      <video class="video lazy" poster="https://pub-b1f092b6867f4495b8f149d222a3bffe.r2.dev/sept28/banner_1x6_customhue_A.jpg" autoplay="autoplay" loop="" playsinline="" muted="muted">
+        <source data-src="https://pub-b1f092b6867f4495b8f149d222a3bffe.r2.dev/sept28/banner_1x6_customhue_A.mp4" type="video/mp4" src="images/banner_1x6_customhue_A.mp4">
+      </video>
+    </div> -->
+    <div class="highlight-clean" style="padding-bottom: 20px;">
+        <div class="container" style="padding-bottom: 10px; max-width: 1000px;">
+            <h1 class="text-center"><b>Progressive Growing of Video Tokenizers for Highly Compressed Latent Spaces</b></h1>
+        </div>
+        <div class="container" style="max-width: 900px;">
+            <div class="row authors institute">
+                <div class="col-sm-12">
+                    <h3 class="text-center"><strong>CVPR 2025</strong>
+                    </h3>
+                </div>
+            </div>
+            <div class="row authors institute">
+                <div class="col-sm-12">
+                    <h4 class="text-center">Paper ID 1427
+                    </h4>
+                </div>
+            </div>
+            <div class="row authors institute">
+                <div class="col-sm-12">
+                    <p>In this supplementary website we provide additional video results for the following cases:</p>
+                    <ul>
+                        <li><strong><b>First row:</b></strong> videos showing reconstruction results under different settings.</li>
+                        <li><strong><b>Second row:</b></strong> videos showing text-to-video geenrating results with different latent spaces.</li>
+                        <li><strong><b>Third row:</b></strong> videos corresponding to figures in the main paper.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="buttons" style="margin-bottom: 8px;">
+            <a class="btn btn-light" role="button" href="../index.html">
+                Reconstruction Comparison <br> 4X (Baselines)
+            </a>
+            <a class="btn btn-light" role="button" href="./reconstruction_8x.html">
+                Reconstruction Comparison <br> 8X
+            </a>
+            <a class="btn btn-light" role="button" href="./reconstruction_16x.html">
+                Reconstruction Comparison <br> 16X
+            </a>
+            <a class="btn btn-light" role="button" href="./reconstruction_overlap.html">
+                Reconstruction Comparison <br> Overlapping Chunks
+            </a>
+            <br>
+            <a class="btn btn-light" role="button" href="./text2video_16x.html">
+                Text-to-Video Generation <br> 16X Latent
+            </a>
+            <a class="btn btn-light" role="button" href="./text2video_16x_v_4x.html">
+                Text-to-Video Generation <br> 4X v/s 16X Latent
+            </a>
+            <a class="btn btn-light disabled border border-dark" aria-disabled="true" role="button" href="./text2video_long.html">
+                Text-to-Video Generation <br> 16X Latent Long Video
+            </a>
+            <a class="btn btn-light" role="button" href="./text2video_overlap.html">
+                Text-to-Video Generation <br> Overlapping Chunks
+            </a>
+            <br>
+            <a class="btn btn-light" role="button" href="./figure_3.html">
+                Figure 3 <br> Main Paper
+            </a>
+            <a class="btn btn-light" role="button" href="./figure_4.html">
+                Figure 4 <br> Main Paper
+            </a>
+            <a class="btn btn-light" role="button" href="./figure_5.html">
+                Figure 5 <br> Main Paper
+            </a>
+            <a class="btn btn-light"  role="button" href="./figure_9.html">
+                Figure 9 <br> Main Paper
+            </a>
+        </div>
+    </div>
+
+
+    <!-- <hr class="divider"> -->
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Text-to-Video Generation (Long Video)</h2>
+                <h3 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">[MagC-Pro-16× Latent Space]</h3>
+                
+                <p style="margin-bottom: 30px; margin-bottom: 30px;">
+                    We have shown theoritically that with our highly compact MagC-Pro-16× latent (16× temporal compression) space, <b><strong>we can generate 340 frames with same token budget as required to generate 68 frames with MagC-Pro-4× latent (4× temporal compression) space.</strong></b>
+                    We show examples of text-to-video generation results for very long videos (14.1s). Videos results are consistent with the text prompt and contain realistic motion.
+                    Generated videos are at 192×320 resolution and have 340 frames (around 14.1s at 24fps).
+                    <br>
+                </p>
+                <p></p>
+                <p></p>
+                <div id="singleconceptscroll" class="containershadow" style="overflow-y:auto; max-width: 1100px; margin: 0 auto;">
+
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                            <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An older man playing piano, <br> lit from the side.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/5.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A slow cinematic push in on an ostrich standing in a 1980s kitchen.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/6.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An empty warehouse, zoom in into a wonderful jungle that emerges from...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/9.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                            <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A dynamic motion shot of <br> ethereal underwater caustics <br> dancing across a sandy seabed.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/11.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Yellow mold growing in a petri dish, moody and dim lighting, cool tones, cold color grade, dynamic motion.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/23.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Hyperspeed hand held camera. An irregular sphere shape ball dramatically undulates, warps and explodes as it...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/24.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                            <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An ultra-fast first-person POV hyper-lapse rapidly speeding through a forest fire into a snow capped...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/30.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Apple transforming into <br> a baseball</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/18.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Create a high-quality, realistic video portrait of an android posing against a black background...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/39.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                            <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/52.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">High angle travelling of the city of Paris, completely submerged underwater, rich marine life.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/57.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Space Astronaut floating in space <br> in front of a Magnetic field <br> energy wormhole.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/68.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                            <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A cinematic time-lapse drone video of a journey from the  New York City to the shores of Miami...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/78.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Starting from a ground-level view of a road leading towards a tunnel in a graffiti covered...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/81.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Visual: A night scene in a city with wet streets reflecting city lights. The camera starts on the...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/85.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                            <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">The camera rotates around a large stack of vintage televisions all showing different programs...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/116.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/120.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 33%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Tour of an art gallery with many beautiful works of art <br> in different styles.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./results/t2v_long/126.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <hr />
+
+
+                </div>
+                <p></p>
+                <p></p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="images/polyfill.js"></script>
+    <script src="images/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="images/scripts.js"></script>
+    <script src="images/jquery.min.js"></script>
+    <script src="images/bootstrap.bundle.min.js"></script>
+    <script src="images/webflow.fd002feec.js"></script>
+
+    <!-- Import the component -->
+
+
+
+</body>
+
+</html>
