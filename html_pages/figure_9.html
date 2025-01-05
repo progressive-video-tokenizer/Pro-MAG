@@ -49,21 +49,49 @@
             <h1 class="text-center"><b>Progressive Growing of Video Tokenizers for Highly Compressed Latent Spaces</b></h1>
         </div>
         <div class="container" style="max-width: 900px;">
-            <div class="row authors institute">
-                <div class="col-sm-12">
-                    <h3 class="text-center"><strong>CVPR 2025</strong>
-                    </h3>
-                </div>
+            <div class="row authors" style="padding-bottom: 25px; padding-left: 100px;">
+                <h5 class="text-center"><a class="text-center" href="https://anime26398.github.io/">Aniruddha
+                        Mahapatra</a><sup style="padding-right: 25px;">1</sup></h5>
+                <h5 class="text-center"><a class="text-center"
+                        href="httphttps://mai-t-long.com/">Long Mai</a><sup style="padding-right: 25px;">1</sup></h5>
+                <h5 class="text-center"><a href="https://bespontaneous.github.io/homepage/">Yitian Zhang</a><sup
+                        style="padding-right: 25px;">2</sup></h5>
+                <h5 class="text-center"><a class="text-center" href="https://www.davidbourgin.com/">David Bourgin</a><sup style="padding-right: 25px;">1</sup></h5>
+                <h5 class="text-center"><a class="text-center" href="https://pages.cs.wisc.edu/~fliu/">Feng Liu</a><sup style="padding-right: 25px;">1</sup></h5>
             </div>
             <div class="row authors institute">
                 <div class="col-sm-12">
-                    <h4 class="text-center">Paper ID 1427
+                    <h4 class="text-center"><sup>1</sup> Adobe &nbsp&nbsp <sup>2</sup>Northeastern University
                     </h4>
                 </div>
             </div>
+        </div>
+        <div class="buttons" style="margin-bottom: 8px;">
+            <a class="btn btn-light" aria-disabled="true" role="button" href="../index.html">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px"
+                    height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 " />
+                </svg>
+                Project
+            </a>
+            <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2307.03190">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z">
+                    </path>
+                </svg>ArXiv
+            </a>
+        </div>
+
+        <div class="container" style="padding-bottom: 10px; max-width: 1400px;">
+            <hr />
+            <p></p>
+            <p></p>
+        </div>
+
+        <div class="container" style="max-width: 900px;">
             <div class="row authors institute">
                 <div class="col-sm-12">
-                    <p>In this supplementary website we provide additional video results for the following cases:</p>
                     <ul>
                         <li><strong><b>First row:</b></strong> videos showing reconstruction results under different settings.</li>
                         <li><strong><b>Second row:</b></strong> videos showing text-to-video geenrating results with different latent spaces.</li>
@@ -73,7 +101,7 @@
             </div>
         </div>
         <div class="buttons" style="margin-bottom: 8px;">
-            <a class="btn btn-light" role="button" href="../index.html">
+            <a class="btn btn-light" role="button" href="./reconstruction_4x.html">
                 Reconstruction Comparison <br> 4X (Baselines)
             </a>
             <a class="btn btn-light" role="button" href="./reconstruction_8x.html">
@@ -99,16 +127,16 @@
                 Text-to-Video Generation <br> Overlapping Chunks
             </a>
             <br>
+            <a class="btn btn-light" role="button" href="./figure_2.html">
+                Figure 2 <br> Main Paper
+            </a>
             <a class="btn btn-light" role="button" href="./figure_3.html">
                 Figure 3 <br> Main Paper
-            </a>
-            <a class="btn btn-light" role="button" href="./figure_4.html">
-                Figure 4 <br> Main Paper
             </a>
             <a class="btn btn-light" role="button" href="./figure_5.html">
                 Figure 5 <br> Main Paper
             </a>
-            <a class="btn btn-light disabled border border-dark" aria-disabled="true"  role="button" href="./figure_9.html">
+            <a class="btn btn-lightdisabled border border-dark" aria-disabled="true" role="button" href="./figure_9.html">
                 Figure 9 <br> Main Paper
             </a>
         </div>
@@ -123,9 +151,9 @@
                 <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Figure 9 (Main Paper)</h2>
                 <h3 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">[Subsampled Encoding + External Interpolation]</h3>
                 <p style="margin-bottom: 30px; margin-bottom: 30px;">
-                We show videos comparing our method MagC-Pro with 16× temporal compression on a 24fps video, against a baseline where we first encode the video at low fps (with frame subsampling 𝑠<sub>𝑓</sub>), in this case transforming the 24fps video into 6fps with 𝑠<sub>𝑓</sub>=4, 
+                We show videos comparing our method ProMAG with 16× temporal compression on a 24fps video, against a baseline where we first encode the video at low fps (with frame subsampling 𝑠<sub>𝑓</sub>), in this case transforming the 24fps video into 6fps with 𝑠<sub>𝑓</sub>=4, 
                 followed by using external interpolation method to generate the 4 in-between frames. 
-                <b><strong>The baseline with external frame interpolation produces very blurry outputs in regions of abrupt and high-intensity motion, compared to our method MagC-Pro-16× operating on 24fps video directly.</strong></b>
+                <b><strong>The baseline with external frame interpolation produces very blurry outputs in regions of abrupt and high-intensity motion, compared to our method ProMAG-16× operating on 24fps video directly.</strong></b>
                 </p>
                 <p></p>
                 <p></p>
@@ -148,7 +176,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-4× (𝑠<sub>𝑓</sub>=4)
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-4× (𝑠<sub>𝑓</sub>=4)
                                     + 4× Interpolation</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/inter4x_1.mp4" style="border: 1px solid black;width:400px"
@@ -160,7 +188,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-16×</p>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16×</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/our_16x_1.mp4" style="border: 1px solid black;width:400px"
                                     type="video/mp4"></video>
@@ -186,7 +214,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-4× (𝑠<sub>𝑓</sub>=4)
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-4× (𝑠<sub>𝑓</sub>=4)
                                     + 4× Interpolation</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/inter4x_3.mp4" style="border: 1px solid black;width:400px"
@@ -198,7 +226,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-16×</p>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16×</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/our_16x_3.mp4" style="border: 1px solid black;width:400px"
                                     type="video/mp4"></video>
@@ -224,7 +252,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-4× (𝑠<sub>𝑓</sub>=4)
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-4× (𝑠<sub>𝑓</sub>=4)
                                     + 4× Interpolation</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/inter4x_4.mp4" style="border: 1px solid black;width:400px"
@@ -236,7 +264,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-16×</p>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16×</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/our_16x_4.mp4" style="border: 1px solid black;width:400px"
                                     type="video/mp4"></video>
@@ -262,7 +290,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-4× (𝑠<sub>𝑓</sub>=4)
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-4× (𝑠<sub>𝑓</sub>=4)
                                     + 4× Interpolation</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/inter4x_2.mp4" style="border: 1px solid black;width:400px"
@@ -274,7 +302,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro-16×</p>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16×</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/figure9/our_16x_2.mp4" style="border: 1px solid black;width:400px"
                                     type="video/mp4"></video>

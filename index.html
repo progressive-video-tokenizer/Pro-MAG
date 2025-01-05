@@ -23,15 +23,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Progressive Growing of Video Tokenizers for Highly Compressed Latent Spaces</title>
-    <link rel="stylesheet" href="html_pages/images/bootstrap.min.css">
-    <link href="html_pages/images/css.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="html_pages/images/Highlight-Clean.css">
-    <link rel="stylesheet" href="html_pages/images/styles.css">
+    <link rel="stylesheet" href="./html_pages/images/bootstrap.min.css">
+    <link href="./html_pages/images/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./html_pages/images/Highlight-Clean.css">
+    <link rel="stylesheet" href="./html_pages/images/styles.css">
 
-    <link rel="manifest" href="html_pages/images/site.webmanifest">
+    <link rel="manifest" href="./html_pages/images/site.webmanifest">
 
-    <script src="html_pages/images/video_comparison.js"></script>
-    <script type="module" src="html_pages/images/model-viewer.min.js"></script>
+    <script src="./html_pages/images/video_comparison.js"></script>
+    <script type="module" src="./html_pages/images/model-viewer.min.js"></script>
 
 
 </head>
@@ -44,6 +44,7 @@
         <source data-src="https://pub-b1f092b6867f4495b8f149d222a3bffe.r2.dev/sept28/banner_1x6_customhue_A.mp4" type="video/mp4" src="html_pages/images/banner_1x6_customhue_A.mp4">
       </video>
     </div> -->
+
     <div class="highlight-clean" style="padding-bottom: 20px;">
         <div class="container" style="padding-bottom: 10px; max-width: 1000px;">
             <h1 class="text-center"><b>Progressive Growing of Video Tokenizers for Highly Compressed Latent Spaces</b></h1>
@@ -66,10 +67,32 @@
                 </div>
             </div>
         </div>
+        <div class="buttons" style="margin-bottom: 8px;">
+            <a class="btn btn-light disabled border border-dark" aria-disabled="true" role="button" href="#">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px"
+                    height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 " />
+                </svg>
+                Project
+            </a>
+            <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2307.03190">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z">
+                    </path>
+                </svg>ArXiv
+            </a>
+        </div>
+
+        <div class="container" style="padding-bottom: 10px; max-width: 1400px;">
+            <hr />
+            <p></p>
+            <p></p>
+        </div>
+
         <div class="container" style="max-width: 900px;">
             <div class="row authors institute">
                 <div class="col-sm-12">
-                    <p>In this supplementary website we provide additional video results for the following cases:</p>
                     <ul>
                         <li><strong><b>First row:</b></strong> videos showing reconstruction results under different settings.</li>
                         <li><strong><b>Second row:</b></strong> videos showing text-to-video geenrating results with different latent spaces.</li>
@@ -79,7 +102,7 @@
             </div>
         </div>
         <div class="buttons" style="margin-bottom: 8px;">
-            <a class="btn btn-light disabled border border-dark" aria-disabled="true" role="button" href="#">
+            <a class="btn btn-light" aria-disabled="true" role="button" href="./html_pages/reconstruction_4x.html">
                 Reconstruction Comparison <br> 4X (Baselines)
             </a>
             <a class="btn btn-light" role="button" href="./html_pages/reconstruction_8x.html">
@@ -105,11 +128,11 @@
                 Text-to-Video Generation <br> Overlapping Chunks
             </a>
             <br>
+            <a class="btn btn-light" role="button" href="./html_pages/figure_2.html">
+                Figure 2 <br> Main Paper
+            </a>
             <a class="btn btn-light" role="button" href="./html_pages/figure_3.html">
                 Figure 3 <br> Main Paper
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/figure_4.html">
-                Figure 4 <br> Main Paper
             </a>
             <a class="btn btn-light" role="button" href="./html_pages/figure_5.html">
                 Figure 5 <br> Main Paper
@@ -126,13 +149,109 @@
     <div class="container" style="max-width: 1400px;">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Reconstruction Comparison (4× Temporal Compression)</h2>
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">ProMAG Reconstruction (4× v/s 8× v/s 16× Temporal Compression)</h2>
                 <p style="margin-bottom: 30px; margin-bottom: 30px;">
-                    We show a comparison of reconstruction results of different baseline methods with our method MagC-Pro at 4× temporal comparison.
-                    <strong><b>The reconstruction results obtained by the video tokenizer in OpenSORA and OpenSORA-Plan are blurry and lack details, especially 
-                    in regions of high-frequency textures </b></strong> (like leaves of a tree, or human faces). In contrast, <strong><b>MagViTv2 achieves sharper results compared to other baselines.</b></strong> We show that even after making modifications to MagViTv2, for efficiency and enabling progressive growing, our model <b><strong>MagC-Pro can achieve a similar reconstruction to MagViTv2.</b></strong>
-                    Finally, <strong><b>MagC-Pro with 16 channel latent has the best reconstruction quality in terms of detail preservation and motion quality.</b></strong>
+                    We show a comparison of reconstruction results for our method ProMAG at different temporal compression ratios 4×, 8× and 16× temporal compression with our progressive growing approach. Note: For all cases in this work we use 8× spatial compression.
+                    <strong><b>ProMAG can achieve similar reconstruction quality without much degradation, even though we increase the temporal comression from 4× to 16× keeping the same number of channels in latent space.</b></strong>
                 </p>
+
+                <h3 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">16 channel Latent (z<sub>dim</sub>=16)</h3>
+                
+                <p></p>
+                <p></p>
+                <div id="singleconceptscroll" class="containershadow" style="overflow-y:auto; max-width: 1400px;  margin: 0 auto;">
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/1_gt.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-4× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/1_4x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-8× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/1_8x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/1_16x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_gt.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-4× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_4x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-8× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_8x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_16x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <hr class="divider"> -->
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Abstract</h2>
+                <p style="margin-bottom: 30px; margin-bottom: 30px;">
+                    Video tokenizers are essential for latent video diffusion models, converting raw video data into spatiotemporally compressed latent spaces for efficient training. However, extending state-of-the-art video tokenizers to achieve a temporal compression ratio beyond 4× without increasing channel capacity poses significant challenges.
+In this work, we propose an alternative approach to enhance temporal compression. We find that the reconstruction quality of temporally subsampled videos from a low-compression encoder surpasses that of high-compression encoders applied to original videos. This indicates that high-compression models can leverage representations from lower-compression models.
+Building on this insight, we develop a bootstrapped high-temporal-compression model that progressively trains high-compression blocks atop well-trained lower-compression models. Our method includes a cross-level feature-mixing module to retain information from the pretrained low-compression model and guide higher-compression blocks to capture the remaining details from the full video sequence.
+Evaluation of video benchmarks shows that our method significantly improves reconstruction quality while increasing temporal compression compared to direct extensions of existing video tokenizers. Furthermore, the resulting compact latent space effectively trains a video diffusion model for high-quality video generation with a reduced token budget.
+                </p>
+                <p></p>
+                <p></p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <hr class="divider"> -->
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Reconstruction Comparison (16× Temporal Compression)</h2>
+                <p style="margin-bottom: 30px; margin-bottom: 30px;">
+                    We show a comparison of reconstruction results of directly extending MagViTv2 to 16× temporal compression against our method ProMAG at 16× with our progressive growing approach.
+                    <b><strong>ProMAG at 16× temporal compression has much more accurate reconstructions and not not contain artifacts observed in the reconstruction results of directly extending MagViTv2 to 16× temporal compression.</strong></b>
+                </p>
+
+                <h3 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">16 channel Latent (z<sub>dim</sub>=16)</h3>
+
                 <p></p>
                 <p></p>
                 <div id="singleconceptscroll" class="containershadow" style="overflow-y:auto; max-width: 1400px;  margin: 0 auto;">
@@ -141,39 +260,19 @@
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/1_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/1_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/1_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2-16× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/1_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/1_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/1_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/1_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/1_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/1_our.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -183,375 +282,128 @@
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_gt_2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/8_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_opensora_2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2-16× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/8_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_opensoraplan_2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=16)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/8_our.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
+                    <hr />
+                </div>
+                <p></p>
+                <p></p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <hr class="divider"> -->
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Text-to-Video Generation (ProMAG-16× Latent Space)</h2>
+                <p style="margin-bottom: 30px; margin-bottom: 30px;">
+                    We show text-to-video generation results with our ProMAG-16× latent (16× temporal compression). 
+                    Our highly compressed latent friendly with video generation. <b><strong>DiT trained on this highly compressed latent can generate videos which accurately follow the prompts and generate realistic motion.</strong></b>
+                    Generated videos are at 192×320 resolution and have 68 frames.
+                    <br>
+                    <strong><b>Note:</b></strong> Our goal is not to compete with the state-of–the-art text-to-video generation method, but just to show that our highly latent is compatible for text-to-video generation.
+                    This (text-to-video generation) is a relatively small scaled experiment.
+                </p>
+                <p></p>
+                <p></p>
+                <div id="singleconceptscroll" class="containershadow" style="overflow-y:auto; max-width: 1400px;">
+
                     <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_magvitv2_2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">In the aerial view of Santorini, white Cycladic buildings with blue domes are...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/347_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_our_8ch_2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">the text "CVPR" is cold over <br> an iceberg.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/97_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_our_16ch_2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A dog wearing virtual reality goggles in sunset, 4k, high resolution.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/164_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
+                            </div>
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An astronaut in a pressure suit is floating weightlessly among a breathtaking...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/399_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
                     <hr />
 
                     <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/16_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Extreme close up of a 24 year old woman eye blinking, standing in Marrakech during magic hour, cinematic...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/112_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/16_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">The camera rotates around a large stack of vintage televisions all showing different programs 1950s sci-fi movies...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/116_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/16_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A stop motion animation of a flower growing out of the windowsill of a suburban house.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/128_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/16_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/16_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/16_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/130_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
                     <hr />
 
                     <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/28_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">In a post-apocalyptic world, a German Shepherd dog wearing a bulky spacesuit lies amidst vibrant...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/400_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/28_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A cute smiling Yorkshire Terrier dressed in a cyberpunk costume sits comfortably on a futuristic chair. The chair...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/406_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/28_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">illustration of a dog floating up into the sky in the flat vector rotoscoped style of "a scanner darkly," digital art.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/481_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/28_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/28_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/28_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/4_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/12_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/12_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/12_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/12_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/12_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/12_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/15_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/15_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/15_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/15_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/15_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/15_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/22_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/22_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/22_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/22_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/22_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/22_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/25_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/25_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/25_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/25_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/25_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/25_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <hr />
-                    
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/8_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/8_opensora.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">OpenSORA-Plan</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/8_opensoraplan.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/8_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=8)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/8_our_8ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
-                            </div>
-                        </div>
-                        <div class="column px-4" style="margin: auto;width: 33%;">
-                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagC-Pro (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/4x_reconstruction/8_our_16ch.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An award winning photo of a stylishly dressed elderly woman wearing very large glasses in the style of...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/482_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -565,6 +417,162 @@
         </div>
     </div>
 
+
+    <!-- <hr class="divider"> -->
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Text-to-Video Generation (Long Video)</h2>
+                <h3 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">[ProMAG-16× Latent Space]</h3>
+                
+                <p style="margin-bottom: 30px; margin-bottom: 30px;">
+                    We have shown theoritically that with our highly compact ProMAG-16× latent (16× temporal compression) space, <b><strong>we can generate 340 frames with same token budget as required to generate 68 frames with ProMAG-4× latent (4× temporal compression) space.</strong></b>
+                    We show examples of text-to-video generation results for very long videos (14.1s). Videos results are consistent with the text prompt and contain realistic motion.
+                    Generated videos are at 192×320 resolution and have 340 frames (around 14.1s at 24fps).
+                    <br>
+                </p>
+                <p></p>
+                <p></p>
+                <div id="singleconceptscroll" class="containershadow" style="overflow-y:auto; max-width: 1400px;">
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A slow cinematic push in on an ostrich standing in a 1980s kitchen.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/6.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An empty warehouse, zoom in into a wonderful jungle that emerges from...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/9.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An irregular sphere shape ball, warps and explodes as it...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/24.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Apple transforming into <br> a baseball</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/18.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <hr />
+
+                    <div class="row">
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Create a high-quality, realistic video portrait of an android posing against a black background...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/39.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                            <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind...</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/52.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">High angle travelling of the city of Paris, completely submerged underwater, rich marine life.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/57.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <div class="column px-4" style="margin: auto;width: 25%;">
+                            <!-- <div class="row text-center"> -->
+                                <div class="row text-center"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Space Astronaut floating in space <br> in front of a Magnetic field <br> energy wormhole.</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
+                                    src="./html_pages/results/t2v_long/68.mp4" style="border: 1px solid black;width:300px"
+                                    type="video/mp4"></video>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    </div>
+                    <hr />
+
+                </div>
+                <p></p>
+                <p></p>
+
+            </div>
+        </div>
+    </div>
+
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Citation</h2>
+                <code>
+                    @inproceedings{mahapatra2025progressive,<br>
+                    &nbsp; title={Progressive Growing of Video Tokenizers for Highly Compressed Latent Spaces},<br>
+                    &nbsp; author={Mahapatra, Aniruddha and Mai, Long and Zhang, Yitian and Bourgin, David and Liu, Feng},<br>
+                    &nbsp; journal={arXiv preprint arXiv:2307.03190},<br>
+                    &nbsp; year   = {2025},<br>
+                }</code>
+            </div>
+        </div>
+    </div>
+
+
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Acknowledgements</h2>
+                <p>
+                    We thank Kuldeep Kulkarni, Cusuh Ham, and Gunjan Aggarwal for proofreading the paper. We are also grateful to Richard Zhang, Zhifei Zhang, Jianming Zhang, Gunjan Aggarwal, Kevin Duarte, Yang Zhou, Zhan Xu, and Lakshya for several fruitful discussions. This work was partly done while Yitian was an intern at Adobe.
+                    <br>
+                    The website template is taken from <a href="https://www.cs.cmu.edu/~custom-diffusion/">Custom
+                        Diffusion</a> (which was built on<a href="https://dreamfusion3d.github.io/index.html">
+                        DreamFusion</a>'s project page).
+                </p>
+            </div>
+        </div>
+    </div>
 
 
 

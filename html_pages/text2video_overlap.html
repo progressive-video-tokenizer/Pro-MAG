@@ -49,21 +49,49 @@
             <h1 class="text-center"><b>Progressive Growing of Video Tokenizers for Highly Compressed Latent Spaces</b></h1>
         </div>
         <div class="container" style="max-width: 900px;">
-            <div class="row authors institute">
-                <div class="col-sm-12">
-                    <h3 class="text-center"><strong>CVPR 2025</strong>
-                    </h3>
-                </div>
+            <div class="row authors" style="padding-bottom: 25px; padding-left: 100px;">
+                <h5 class="text-center"><a class="text-center" href="https://anime26398.github.io/">Aniruddha
+                        Mahapatra</a><sup style="padding-right: 25px;">1</sup></h5>
+                <h5 class="text-center"><a class="text-center"
+                        href="httphttps://mai-t-long.com/">Long Mai</a><sup style="padding-right: 25px;">1</sup></h5>
+                <h5 class="text-center"><a href="https://bespontaneous.github.io/homepage/">Yitian Zhang</a><sup
+                        style="padding-right: 25px;">2</sup></h5>
+                <h5 class="text-center"><a class="text-center" href="https://www.davidbourgin.com/">David Bourgin</a><sup style="padding-right: 25px;">1</sup></h5>
+                <h5 class="text-center"><a class="text-center" href="https://pages.cs.wisc.edu/~fliu/">Feng Liu</a><sup style="padding-right: 25px;">1</sup></h5>
             </div>
             <div class="row authors institute">
                 <div class="col-sm-12">
-                    <h4 class="text-center">Paper ID 1427
+                    <h4 class="text-center"><sup>1</sup> Adobe &nbsp&nbsp <sup>2</sup>Northeastern University
                     </h4>
                 </div>
             </div>
+        </div>
+        <div class="buttons" style="margin-bottom: 8px;">
+            <a class="btn btn-light" aria-disabled="true" role="button" href="../index.html">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px"
+                    height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 " />
+                </svg>
+                Project
+            </a>
+            <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2307.03190">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
+                    <path fill="currentColor"
+                        d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z">
+                    </path>
+                </svg>ArXiv
+            </a>
+        </div>
+
+        <div class="container" style="padding-bottom: 10px; max-width: 1400px;">
+            <hr />
+            <p></p>
+            <p></p>
+        </div>
+
+        <div class="container" style="max-width: 900px;">
             <div class="row authors institute">
                 <div class="col-sm-12">
-                    <p>In this supplementary website we provide additional video results for the following cases:</p>
                     <ul>
                         <li><strong><b>First row:</b></strong> videos showing reconstruction results under different settings.</li>
                         <li><strong><b>Second row:</b></strong> videos showing text-to-video geenrating results with different latent spaces.</li>
@@ -73,7 +101,7 @@
             </div>
         </div>
         <div class="buttons" style="margin-bottom: 8px;">
-            <a class="btn btn-light" role="button" href="../index.html">
+            <a class="btn btn-light" role="button" href="./reconstruction_4x.html">
                 Reconstruction Comparison <br> 4X (Baselines)
             </a>
             <a class="btn btn-light" role="button" href="./reconstruction_8x.html">
@@ -99,16 +127,16 @@
                 Text-to-Video Generation <br> Overlapping Chunks
             </a>
             <br>
+            <a class="btn btn-light" role="button" href="./figure_2.html">
+                Figure 2 <br> Main Paper
+            </a>
             <a class="btn btn-light" role="button" href="./figure_3.html">
                 Figure 3 <br> Main Paper
-            </a>
-            <a class="btn btn-light" role="button" href="./figure_4.html">
-                Figure 4 <br> Main Paper
             </a>
             <a class="btn btn-light" role="button" href="./figure_5.html">
                 Figure 5 <br> Main Paper
             </a>
-            <a class="btn btn-light"  role="button" href="./figure_9.html">
+            <a class="btn btn-light" role="button" href="./figure_9.html">
                 Figure 9 <br> Main Paper
             </a>
         </div>
@@ -121,12 +149,12 @@
         <div class="row">
             <div class="col-md-12">
                 <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Text-to-Video Generation (Overlap v/s Non-Overlap Latent)</h2>
-                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">MagC-Pro-16× Latent Space</h2>
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">ProMAG-16× Latent Space</h2>
                 <p style="margin-bottom: 30px; margin-bottom: 30px;">
                     Similar to MagViTv2, we encode and decode 17 frames (chunk) at a time. Thus we can observe jumps in text-to-video results every 17 frames in regions of high frequency details <span style="font-weight:900">(left)</span>.
                     We show that training DiT with overlapped encoded frames can mitigate this issue. 
                     Here, we train the text-to-video model (DiT) on encoded frames with an overlap of 4 video frames, and while generating text-to-video results, we blend the overlapped frames across 2 chunks with linear interpolation weights.
-                    We show a comparison of videos generated of text-to-video trained our method MagC-Pro at 16× temporal compression with with and without frame overlapping.
+                    We show a comparison of videos generated of text-to-video trained our method ProMAG at 16× temporal compression with with and without frame overlapping.
                     <b><strong>Frame overlapping removes the jump in textures, otherwise observed every 17 frames</strong></b> <span style="font-weight:900">(right)</span>. 
                     Here we use same latent frames for both cases. Text-to-Video results without overlapping generated 68 frames, whereas ones with 4 frame overlapping generate 56 frames, both at 192×352 resolution.
                 </p>
