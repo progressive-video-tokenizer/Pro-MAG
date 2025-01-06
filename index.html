@@ -55,9 +55,9 @@
                         Mahapatra</a><sup style="padding-right: 25px;">1</sup></h5>
                 <h5 class="text-center"><a class="text-center"
                         href="httphttps://mai-t-long.com/">Long Mai</a><sup style="padding-right: 25px;">1</sup></h5>
-                <h5 class="text-center"><a href="https://bespontaneous.github.io/homepage/">Yitian Zhang</a><sup
-                        style="padding-right: 25px;">2</sup></h5>
                 <h5 class="text-center"><a class="text-center" href="https://www.davidbourgin.com/">David Bourgin</a><sup style="padding-right: 25px;">1</sup></h5>
+                <h5 class="text-center"><a href="https://bespontaneous.github.io/homepage/">Yitian Zhang</a><sup
+                    style="padding-right: 25px;">1,2</sup></h5>
                 <h5 class="text-center"><a class="text-center" href="https://pages.cs.wisc.edu/~fliu/">Feng Liu</a><sup style="padding-right: 25px;">1</sup></h5>
             </div>
             <div class="row authors institute">
@@ -68,13 +68,6 @@
             </div>
         </div>
         <div class="buttons" style="margin-bottom: 8px;">
-            <a class="btn btn-light disabled border border-dark" aria-disabled="true" role="button" href="#">
-                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px"
-                    height="24px" viewBox="0 0 375 531">
-                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 " />
-                </svg>
-                Project
-            </a>
             <a class="btn btn-light" role="button" href="https://arxiv.org/abs/2307.03190">
                 <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -82,67 +75,41 @@
                     </path>
                 </svg>ArXiv
             </a>
-        </div>
-
-        <div class="container" style="padding-bottom: 10px; max-width: 1400px;">
-            <hr />
-            <p></p>
-            <p></p>
-        </div>
-
-        <div class="container" style="max-width: 900px;">
-            <div class="row authors institute">
-                <div class="col-sm-12">
-                    <ul>
-                        <li><strong><b>First row:</b></strong> videos showing reconstruction results under different settings.</li>
-                        <li><strong><b>Second row:</b></strong> videos showing text-to-video geenrating results with different latent spaces.</li>
-                        <li><strong><b>Third row:</b></strong> videos corresponding to figures in the main paper.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="buttons" style="margin-bottom: 8px;">
-            <a class="btn btn-light" aria-disabled="true" role="button" href="./html_pages/reconstruction_4x.html">
-                Reconstruction Comparison <br> 4X (Baselines)
+            <a class="btn btn-light disabled border border-dark" aria-disabled="true" role="button" href="#">
+                <svg style="visibility:hidden;width:0px;height:24px;margin-left:-12px;margin-right:12px" width="0px"
+                    height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 " />
+                </svg>
+                Project
             </a>
-            <a class="btn btn-light" role="button" href="./html_pages/reconstruction_8x.html">
-                Reconstruction Comparison <br> 8X
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/reconstruction_16x.html">
-                Reconstruction Comparison <br> 16X
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/reconstruction_overlap.html">
-                Reconstruction Comparison <br> Overlapping Chunks
-            </a>
-            <br>
-            <a class="btn btn-light" role="button" href="./html_pages/text2video_16x.html">
-                Text-to-Video Generation <br> 16X Latent
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/text2video_16x_v_4x.html">
-                Text-to-Video Generation <br> 4X v/s 16X Latent
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/text2video_long.html">
-                Text-to-Video Generation <br> 16X Latent Long Video
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/text2video_overlap.html">
-                Text-to-Video Generation <br> Overlapping Chunks
-            </a>
-            <br>
-            <a class="btn btn-light" role="button" href="./html_pages/figure_2.html">
-                Figure 2 <br> Main Paper
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/figure_3.html">
-                Figure 3 <br> Main Paper
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/figure_5.html">
-                Figure 5 <br> Main Paper
-            </a>
-            <a class="btn btn-light" role="button" href="./html_pages/figure_9.html">
-                Figure 9 <br> Main Paper
+            <a class="btn btn-light" role="button" href="./html_pages/reconstruction_4x.html">
+                <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px"
+                    height="24px" viewBox="0 0 375 531">
+                    <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 " />
+                </svg>
+                Gallery
             </a>
         </div>
     </div>
 
+    <!-- <hr class="divider"> -->
+    <hr style="max-width: 1400px;">
+    <div class="container" style="max-width: 1400px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Abstract</h2>
+                <p style="margin-bottom: 30px; margin-bottom: 30px;">
+                    Video tokenizers are essential for latent video diffusion models, converting raw video data into spatiotemporally compressed latent spaces for efficient training. However, extending state-of-the-art video tokenizers to achieve a temporal compression ratio beyond 4× without increasing channel capacity poses significant challenges.
+In this work, we propose an alternative approach to enhance temporal compression. We find that the reconstruction quality of temporally subsampled videos from a low-compression encoder surpasses that of high-compression encoders applied to original videos. This indicates that high-compression models can leverage representations from lower-compression models.
+Building on this insight, we develop a bootstrapped high-temporal-compression model that progressively trains high-compression blocks atop well-trained lower-compression models. Our method includes a cross-level feature-mixing module to retain information from the pretrained low-compression model and guide higher-compression blocks to capture the remaining details from the full video sequence.
+Evaluation of video benchmarks shows that our method significantly improves reconstruction quality while increasing temporal compression compared to direct extensions of existing video tokenizers. Furthermore, the resulting compact latent space effectively trains a video diffusion model for high-quality video generation with a reduced token budget.
+                </p>
+                <p></p>
+                <p></p>
+
+            </div>
+        </div>
+    </div>
 
     <!-- <hr class="divider"> -->
     <hr style="max-width: 1400px;">
@@ -192,25 +159,25 @@
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_gt.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/3_gt.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-4× (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_4x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/3_4x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-8× (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_8x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/3_8x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/2_16x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/our_reconstruction_comparison/3_16x.mp4" style="border: 1px solid black;width:320px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -225,16 +192,16 @@
     <div class="container" style="max-width: 1400px;">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Abstract</h2>
-                <p style="margin-bottom: 30px; margin-bottom: 30px;">
-                    Video tokenizers are essential for latent video diffusion models, converting raw video data into spatiotemporally compressed latent spaces for efficient training. However, extending state-of-the-art video tokenizers to achieve a temporal compression ratio beyond 4× without increasing channel capacity poses significant challenges.
-In this work, we propose an alternative approach to enhance temporal compression. We find that the reconstruction quality of temporally subsampled videos from a low-compression encoder surpasses that of high-compression encoders applied to original videos. This indicates that high-compression models can leverage representations from lower-compression models.
-Building on this insight, we develop a bootstrapped high-temporal-compression model that progressively trains high-compression blocks atop well-trained lower-compression models. Our method includes a cross-level feature-mixing module to retain information from the pretrained low-compression model and guide higher-compression blocks to capture the remaining details from the full video sequence.
-Evaluation of video benchmarks shows that our method significantly improves reconstruction quality while increasing temporal compression compared to direct extensions of existing video tokenizers. Furthermore, the resulting compact latent space effectively trains a video diffusion model for high-quality video generation with a reduced token budget.
+                <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Methodology</h2>
+                <p></p>
+                <div style="text-align: center;">
+                    <img src="./html_pages/images/method_2.png" style="width: 70%;" />
+                </div>
+                <p></p>
+                <p></p>
+                <p>
+                    Figure shows details of our method of progressive growing. In Stage I (top) we show a method of training our base 4× video tokenizer. (bottom) we illustrate the detailed method of growing the base 4× model to achieve 8× temporal compression.
                 </p>
-                <p></p>
-                <p></p>
-
             </div>
         </div>
     </div>
@@ -250,7 +217,7 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                     <b><strong>ProMAG at 16× temporal compression has much more accurate reconstructions and not not contain artifacts observed in the reconstruction results of directly extending MagViTv2 to 16× temporal compression.</strong></b>
                 </p>
 
-                <h3 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">16 channel Latent (z<sub>dim</sub>=16)</h3>
+                <h3 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">8 channel Latent (z<sub>dim</sub>=8)</h3>
 
                 <p></p>
                 <p></p>
@@ -260,19 +227,19 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/1_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/8ch/3_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2-16× (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/1_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2-16× (z<sub>dim</sub>=8)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/8ch/3_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/1_our.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=8)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/8ch/3_our.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -282,19 +249,19 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
                                 <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">Ground-Truth</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/8_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/8ch/1_gt.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2-16× (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/8_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">MagViTv2-16× (z<sub>dim</sub>=8)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/8ch/1_magvitv2.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 33%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=16)</p>
-                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/16ch/8_our.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
+                                <p style="font-size: 16px; margin-top: -2px;font-family: sans-serif;">ProMAG-16× (z<sub>dim</sub>=8)</p>
+                                <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/16x_reconstruction/8ch/1_our.mp4" style="border: 1px solid black;width:420px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
@@ -313,106 +280,94 @@ Evaluation of video benchmarks shows that our method significantly improves reco
         <div class="row">
             <div class="col-md-12">
                 <h2 class="text-center" style="margin-bottom: 30px; margin-top: 10px;">Text-to-Video Generation (ProMAG-16× Latent Space)</h2>
-                <p style="margin-bottom: 30px; margin-bottom: 30px;">
-                    We show text-to-video generation results with our ProMAG-16× latent (16× temporal compression). 
-                    Our highly compressed latent friendly with video generation. <b><strong>DiT trained on this highly compressed latent can generate videos which accurately follow the prompts and generate realistic motion.</strong></b>
-                    Generated videos are at 192×320 resolution and have 68 frames.
-                    <br>
-                    <strong><b>Note:</b></strong> Our goal is not to compete with the state-of–the-art text-to-video generation method, but just to show that our highly latent is compatible for text-to-video generation.
-                    This (text-to-video generation) is a relatively small scaled experiment.
+                <p style="margin-bottom: 30px;">
+                    We show text-to-video generation results with our ProMAG-16× latent (16× temporal compression). Our highly compressed latent is friendly with video generation. <b><strong>DiT trained on this highly compressed latent can generate videos which accurately follow the prompts and generate realistic motion.</strong></b>
+                    <br><br>
+                    <em>Note:</em> Hover over the text to see the full prompt.
                 </p>
-                <p></p>
-                <p></p>
                 <div id="singleconceptscroll" class="containershadow" style="overflow-y:auto; max-width: 1400px;">
-
                     <div class="row">
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">In the aerial view of Santorini, white Cycladic buildings with blue domes are...</p>
+                                <p class="hover-text" data-tooltip="In the aerial view of Santorini, white Cycladic buildings with blue domes are distinctively seen against the caldera's edge. The sun is setting during the beautiful blue hour, casting stunning architecture in soft, warm light. The scene is filled with serene calmness as the whitewashed structures contrast beautifully with the deep blue waters and the captivating caldera views." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">In the aerial view of Santorini, white Cycladic buildings with blue domes are...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/347_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">the text "CVPR" is cold over <br> an iceberg.</p>
+                                <p class="hover-text" data-tooltip="The text 'CVPR' is cold over an iceberg" style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">The text "CVPR" is cold over <br> an iceberg.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/97_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A dog wearing virtual reality goggles in sunset, 4k, high resolution.</p>
+                                <p class="hover-text" data-tooltip="A dog wearing virtual reality goggles in sunset, 4k, high resolution." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A dog wearing virtual reality goggles in sunset, 4k, high resolution.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/164_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An astronaut in a pressure suit is floating weightlessly among a breathtaking...</p>
+                                <p class="hover-text" data-tooltip="An astronaut in a pressure suit is floating weightlessly among a breathtaking display of celestial bodies. Surrounding him are vibrant supernovae, their explosive gases illuminating the vast expanse of space. Nearby, planets of various sizes and textures orbit lazily, their atmospheres shimmering with intriguing hues. Asteroids drift past, their jagged surfaces reflecting the brilliant radiance of the stars. The astronaut's expression conveys awe and fascination as he observations this magnificent cosmic panorama." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An astronaut in a pressure suit is floating weightlessly among a breathtaking...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/399_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
                     <hr />
-
                     <div class="row">
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Extreme close up of a 24 year old woman eye blinking, standing in Marrakech during magic hour, cinematic...</p>
+                                <p class="hover-text" data-tooltip="Extreme close up of a 24 year old woman’s eye blinking, standing in Marrakech during magic hour, cinematic film shot in 70mm, depth of field, vivid colors, cinematic." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Extreme close-up of a 24-year-old woman's eye blinking, standing in Marrakech during magic hour, cinematic...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/112_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">The camera rotates around a large stack of vintage televisions all showing different programs 1950s sci-fi movies...</p>
+                                <p class="hover-text" data-tooltip="The camera rotates around a large stack of vintage televisions all showing different programs — 1950s sci-fi movies, horror movies, news, static, a 1970s sitcom, etc, set inside a large New York museum gallery." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">The camera rotates around a large stack of vintage televisions all showing different programs...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/116_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A stop motion animation of a flower growing out of the windowsill of a suburban house.</p>
+                                <p class="hover-text" data-tooltip="A stop-motion animation of a flower growing out of the windowsill of a suburban house." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A stop-motion animation of a flower growing out of the windowsill of a suburban house.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/128_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history...</p>
+                                <p class="hover-text" data-tooltip="An extreme close-up of an gray-haired man with a beard in his 60s, he is deep in thought pondering the history of the universe as he sits at a cafe in Paris, his eyes focus on people offscreen as they walk as he sits mostly motionless, he is dressed in a wool coat suit coat with a button-down shirt , he wears a brown beret and glasses and has a very professorial appearance, and the end he offers a subtle closed-mouth smile as if he found the answer to the mystery of life, the lighting is very cinematic with the golden light and the Parisian streets and city in the background, depth of field, cinematic 35mm film." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An extreme close-up of a gray-haired man with a beard in his 60s, deep in thought pondering history...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/130_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
                     <hr />
-
                     <div class="row">
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">In a post-apocalyptic world, a German Shepherd dog wearing a bulky spacesuit lies amidst vibrant...</p>
+                                <p class="hover-text" data-tooltip="In a post-apocalyptic world, a German Shepherd dog wearing a bulky space suit lies amidst vibrant debris and rubble. Dramatic cinematic lighting highlights the vivid and sparkling colors of the destroyed landscape. The large breed dog seems alert yet calm, positioned between two large pieces of wreckage." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">In a post-apocalyptic world, a German Shepherd dog wearing a bulky spacesuit lies amidst vibrant...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/400_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A cute smiling Yorkshire Terrier dressed in a cyberpunk costume sits comfortably on a futuristic chair. The chair...</p>
+                                <p class="hover-text" data-tooltip="A cute smiling Yorkshire Terrier dressed in a cyberpunk costume sits comfortably on a futuristic chair. The chair, adorned with neon lights and metallic accents, is placed against a backdrop of the golden hour sun. The dog dons a cyberpunk outfit with matching glasses, enhancing its adorable demeanor. The scene is set with a narrow depth of field, adding emphasis to the subject and creating a hyper-realistic 3D effect." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A cute smiling Yorkshire Terrier dressed in a cyberpunk costume sits comfortably on a futuristic chair...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/406_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">illustration of a dog floating up into the sky in the flat vector rotoscoped style of "a scanner darkly," digital art.</p>
+                                <p class="hover-text" data-tooltip="Illustration of a dog floating up into the sky in the flat vector rotoscoped style of 'A Scanner Darkly.'" style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Illustration of a dog floating up into the sky in the flat vector rotoscoped style of "A Scanner Darkly."</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/481_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An award winning photo of a stylishly dressed elderly woman wearing very large glasses in the style of...</p>
+                                <p class="hover-text" data-tooltip="An award winning photo of a stylishly dressed elderly woman wearing very large glasses in the style of Iris Apfel, highly detailed features" style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An award-winning photo of a stylishly dressed elderly woman wearing very large glasses...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted" src="./html_pages/results/t2v_comparison/482_16x.mp4" style="border: 1px solid black;width:300px" type="video/mp4"></video>
                             </div>
                         </div>
                     </div>
                     <hr />
-
                 </div>
-                <p></p>
-                <p></p>
-
             </div>
         </div>
     </div>
@@ -430,7 +385,8 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                     We have shown theoritically that with our highly compact ProMAG-16× latent (16× temporal compression) space, <b><strong>we can generate 340 frames with same token budget as required to generate 68 frames with ProMAG-4× latent (4× temporal compression) space.</strong></b>
                     We show examples of text-to-video generation results for very long videos (14.1s). Videos results are consistent with the text prompt and contain realistic motion.
                     Generated videos are at 192×320 resolution and have 340 frames (around 14.1s at 24fps).
-                    <br>
+                    <br><br>
+                    <em>Note:</em> Hover over the text to see the full prompt.
                 </p>
                 <p></p>
                 <p></p>
@@ -441,29 +397,31 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A slow cinematic push in on an ostrich standing in a 1980s kitchen.</p>
+                                <p class="hover-text" data-tooltip="A slow cinematic push in on an ostrich standing in a 1980s kitchen." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">
+                                    A slow cinematic push in on an ostrich standing in a 1980s kitchen.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./html_pages/results/t2v_long/6.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
                             </div>
                             <!-- </div> -->
                         </div>
-                        <div class="column px-4" style="margin: auto;width: 25%;">
-                            <!-- <div class="row text-center"> -->
-                                <div class="row text-center"
-                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An empty warehouse, zoom in into a wonderful jungle that emerges from...</p>
+                        <div class="column px-4" style="margin: auto; width: 25%; position: relative; overflow: visible;">
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p class="hover-text" data-tooltip="Starting from a ground-level view of a road leading towards a tunnel. The scene transitions into a tunnel with spectacular light effects, giving a surreal visual experience."
+                                    style="font-size: 16px; margin-top: -2px; font-family: 'Bradley Hand', cursive;">
+                                    Starting from a ground-level view of a road leading towards a tunnel...
+                                </p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
-                                    src="./html_pages/results/t2v_long/9.mp4" style="border: 1px solid black;width:300px"
+                                    src="./html_pages/results/t2v_long/81.mp4" style="border: 1px solid black; width: 300px"
                                     type="video/mp4"></video>
                             </div>
-                            <!-- </div> -->
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An irregular sphere shape ball, warps and explodes as it...</p>
+                                <p class="hover-text" data-tooltip="Hyperspeed hand held camera. An irregular sphere shape ball dramatically undulates, warps and explodes as it transforms into a completely different man. Surreal." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">
+                                    An irregular sphere shape ball, warps and explodes as it...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./html_pages/results/t2v_long/24.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -474,7 +432,8 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Apple transforming into <br> a baseball</p>
+                                <p class="hover-text" data-tooltip="Apple transforming into a baseball" style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">
+                                    Apple transforming into <br> a baseball</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./html_pages/results/t2v_long/18.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -486,21 +445,21 @@ Evaluation of video benchmarks shows that our method significantly improves reco
 
                     <div class="row">
                         <div class="column px-4" style="margin: auto;width: 25%;">
-                            <!-- <div class="row text-center"> -->
-                                <div class="row text-center"
-                                style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Create a high-quality, realistic video portrait of an android posing against a black background...</p>
+                            <div class="row text-center" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                                <p class="hover-text" data-tooltip="Create a high-quality, realistic video portrait of an android posing against a black background. The scene should have a cinematic feel, with a strong emphasis on purple and teal hues to enhance the sci-fi atmosphere. Incorporate ray tracing and HDR techniques to achieve dynamic lighting and shadow play, resulting in a high-contrast visual style. Ensure the android's features are detailed and lifelike, capturing the essence of a futuristic, sci-fi character." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">
+                                    Create a high-quality, realistic video portrait of an android posing against a black background...
+                                </p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./html_pages/results/t2v_long/39.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
                             </div>
-                            <!-- </div> -->
                         </div>
                         <div class="column px-4" style="margin: auto;width: 25%;">
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind...</p>
+                                <p class="hover-text" data-tooltip="A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind, fisheye perspective, vibrant blue and purple colors, dreamlike and magical atmosphere, high resolution, intricate details in the clouds and galaxies." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">
+                                    A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./html_pages/results/t2v_long/52.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -511,7 +470,8 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">High angle travelling of the city of Paris, completely submerged underwater, rich marine life.</p>
+                                <p class="hover-text" data-tooltip="High angle travelling of the city of Paris, completely submerged underwater, rich marine life." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">
+                                    High angle travelling of the city of Paris, completely submerged underwater, rich marine life.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./html_pages/results/t2v_long/57.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -522,7 +482,8 @@ Evaluation of video benchmarks shows that our method significantly improves reco
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Space Astronaut floating in space <br> in front of a Magnetic field <br> energy wormhole.</p>
+                                <p class="hover-text" data-tooltip="Space Astronaut floating in space in front of a Magnetic field energy wormhole." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">
+                                    Space Astronaut floating in space <br> in front of a Magnetic field <br> energy wormhole.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./html_pages/results/t2v_long/68.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -593,6 +554,42 @@ Evaluation of video benchmarks shows that our method significantly improves reco
     <script src="html_pages/images/webflow.fd002feec.js"></script>
 
     <!-- Import the component -->
+    <style>
+        .hover-text {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hover-text:hover::after {
+            content: attr(data-tooltip); /* Use the data-tooltip attribute */
+            position: absolute;
+            left: 50%; /* Center the tooltip horizontally */
+            transform: translateX(-50%);
+            top: -10px; /* Adjust placement above the text */
+            width: 300px; /* Fixed width */
+            max-width: calc(100vw - 20px); /* Ensure it fits within the viewport */
+            background: #333; /* Dark background for tooltip */
+            color: #fff; /* White text */
+            font-size: 16px;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 4px;
+            opacity: 1;
+            visibility: visible;
+            white-space: normal; /* Allow multiline text */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            z-index: 99999; /* Ensure tooltip is on top */
+        }
+
+        .column {
+            position: relative;
+            overflow: visible; /* Ensure the tooltip isn't clipped */
+        }
+        .container, .row {
+            overflow: visible
+        }
+
+    </style>
 
 
 
