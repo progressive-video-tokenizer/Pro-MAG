@@ -61,7 +61,7 @@
             </div>
             <div class="row authors institute">
                 <div class="col-sm-12">
-                    <h4 class="text-center"><sup>1</sup> Adobe &nbsp&nbsp <sup>2</sup>Northeastern University
+                    <h4 class="text-center"><sup>1</sup> Adobe Research &nbsp&nbsp <sup>2</sup> Northeastern University
                     </h4>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                 </svg>
                 Project
             </a>
-            <a class="btn btn-light" role="button" href="./reconstruction_4x.html">
+            <a class="btn btn-light disabled border border-dark" role="button" href="./reconstruction_4x.html">
                 <svg style="width:24px;height:24px;margin-left:-12px;margin-right:12px" width="24px"
                     height="24px" viewBox="0 0 375 531">
                     <polygon stroke="#000000" points="0.5,0.866 459.5,265.87 0.5,530.874 " />
@@ -162,7 +162,8 @@
                     We have shown theoritically that with our highly compact ProMAG-16× latent (16× temporal compression) space, <b><strong>we can generate 340 frames with same token budget as required to generate 68 frames with ProMAG-4× latent (4× temporal compression) space.</strong></b>
                     We show examples of text-to-video generation results for very long videos (14.1s). Videos results are consistent with the text prompt and contain realistic motion.
                     Generated videos are at 192×320 resolution and have 340 frames (around 14.1s at 24fps).
-                    <br>
+                    <br><br>
+                    <em>Note:</em> Hover over the text to see the full prompt.
                 </p>
                 <p></p>
                 <p></p>
@@ -174,7 +175,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An older man playing piano, <br> lit from the side.</p>
+                                <p class="hover-text" data-tooltip="An older man playing piano, lit from the side." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An older man playing piano, <br> lit from the side.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/5.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -185,7 +186,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A slow cinematic push in on an ostrich standing in a 1980s kitchen.</p>
+                                <p class="hover-text" data-tooltip="A slow cinematic push in on an ostrich standing in a 1980s kitchen." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A slow cinematic push in on an ostrich standing in a 1980s kitchen.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/6.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -196,7 +197,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An empty warehouse, zoom in into a wonderful jungle that emerges from...</p>
+                                <p class="hover-text" data-tooltip="An empty warehouse, zoom in into a wonderful jungle that emerges from the ground." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An empty warehouse, zoom in into a wonderful jungle that emerges from...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/9.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -211,7 +212,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A dynamic motion shot of <br> ethereal underwater caustics <br> dancing across a sandy seabed.</p>
+                                <p class="hover-text" data-tooltip="A dynamic motion shot of ethereal underwater caustics dancing across a sandy seabed." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A dynamic motion shot of <br> ethereal underwater caustics <br> dancing across a sandy seabed.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/11.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -222,7 +223,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Yellow mold growing in a petri dish, moody and dim lighting, cool tones, cold color grade, dynamic motion.</p>
+                                <p class="hover-text" data-tooltip="Yellow mold growing in a petri dish, moody and dim lighting, cool tones, cold color grade, dynamic motion." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Yellow mold growing in a petri dish, moody and dim lighting, cool tones, cold color grade, dynamic motion.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/23.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -233,7 +234,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Hyperspeed hand held camera. An irregular sphere shape ball dramatically undulates, warps and explodes as it...</p>
+                                <p class="hover-text" data-tooltip="Hyperspeed hand held camera. An irregular sphere shape ball dramatically undulates, warps and explodes as it transforms into a completely different man. Surreal." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Hyperspeed hand held camera. An irregular sphere shape ball dramatically undulates, warps and explodes as it...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/24.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -248,7 +249,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An ultra-fast first-person POV hyper-lapse rapidly speeding through a forest fire into a snow capped...</p>
+                                <p class="hover-text" data-tooltip="An ultra-fast first-person POV hyper-lapse rapidly speeding through a forest fire into a snow capped mountain." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">An ultra-fast first-person POV hyper-lapse rapidly speeding through a forest fire into a snow capped...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/30.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -259,7 +260,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Apple transforming into <br> a baseball</p>
+                                <p class="hover-text" data-tooltip="Apple transforming into a baseball." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Apple transforming into <br> a baseball</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/18.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -270,7 +271,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Create a high-quality, realistic video portrait of an android posing against a black background...</p>
+                                <p class="hover-text" data-tooltip="Create a high-quality, realistic video portrait of an android posing against a black background. The scene should have a cinematic feel, with a strong emphasis on purple and teal hues to enhance the sci-fi atmosphere. Incorporate ray tracing and HDR techniques to achieve dynamic lighting and shadow play, resulting in a high-contrast visual style. Ensure the android's features are detailed and lifelike, capturing the essence of a futuristic, sci-fi character." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Create a high-quality, realistic video portrait of an android posing against a black background...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/39.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -285,7 +286,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind...</p>
+                                <p class="hover-text" data-tooltip="A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind, fisheye perspective, vibrant blue and purple colors, dreamlike and magical atmosphere, high resolution, intricate details in the clouds and galaxies, lighting dramatic." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A person sitting on a bed looking at a spectacular night sky full of galaxies and stars, view from behind...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/52.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -296,7 +297,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">High angle travelling of the city of Paris, completely submerged underwater, rich marine life.</p>
+                                <p class="hover-text" data-tooltip="High angle travelling of the city of Paris, completely submerged underwater, rich marine life." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">High angle travelling of the city of Paris, completely submerged underwater, rich marine life.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/57.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -307,7 +308,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Space Astronaut floating in space <br> in front of a Magnetic field <br> energy wormhole.</p>
+                                <p class="hover-text" data-tooltip="Space Astronaut floating in space in front of a Magnetic field energy wormhole." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Space Astronaut floating in space <br> in front of a Magnetic field <br> energy wormhole.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/68.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -322,7 +323,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A cinematic time-lapse drone video of a journey from the  New York City to the shores of Miami...</p>
+                                <p class="hover-text" data-tooltip="A cinematic time-lapse drone video of a journey from the  New York City to the shores of Miami. The video start with a panoramic view of Manhattan's iconic skyline." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A cinematic time-lapse drone video of a journey from the  New York City to the shores of Miami...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/78.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -333,7 +334,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Starting from a ground-level view of a road leading towards a tunnel in a graffiti covered...</p>
+                                <p class="hover-text" data-tooltip="Starting from a ground-level view of a road leading towards a tunnel in a graffiti covered city with skyscrapers in the background, the camera tracks smoothly along the road into a short dark tunnel. As it emerges on the other side, the camera rapidly ascends, revealing the road continuing through a huge field of multicoloured wildflowers surrounded by snow capped mountains." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Starting from a ground-level view of a road leading towards a tunnel in a graffiti covered...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/81.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -344,7 +345,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Visual: A night scene in a city with wet streets reflecting city lights. The camera starts on the...</p>
+                                <p class="hover-text" data-tooltip="Visual: A night scene in a city with wet streets reflecting city lights. The camera starts on the reflection in a puddle and pulls up to reveal the source of the reflection—a glowing neon sign—then continues to pull back to show the rain-soaked streets. Camera Movement: Start focused on a close-up of the puddle's reflection, then pull up and back in one fluid motion to reveal the full context of the rainy cityscape." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Visual: A night scene in a city with wet streets reflecting city lights. The camera starts on the...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/85.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -359,7 +360,7 @@
                             <!-- <div class="row text-center"> -->
                             <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">The camera rotates around a large stack of vintage televisions all showing different programs...</p>
+                                <p class="hover-text" data-tooltip="The camera rotates around a large stack of vintage televisions all showing different programs — 1950s sci-fi movies, horror movies, news, static, a 1970s sitcom, etc, set inside a large New York museum gallery." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">The camera rotates around a large stack of vintage televisions all showing different programs...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/116.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -370,7 +371,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi...</p>
+                                <p class="hover-text" data-tooltip="A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi Coast, the view showcases historic and magnificent architectural details and tiered pathways and patios, waves are seen crashing against the rocks below as the view overlooks the horizon of the coastal waters and hilly landscapes of the Amalfi Coast Italy, several distant people are seen walking and enjoying vistas on patios of the dramatic ocean views, the warm glow of the afternoon sun creates a magical and romantic feeling to the scene, the view is stunning captured with beautiful photography." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">A drone camera circles around a beautiful historic church built on a rocky outcropping along the Amalfi...</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/120.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -381,7 +382,7 @@
                             <!-- <div class="row text-center"> -->
                                 <div class="row text-center"
                                 style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                                <p style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Tour of an art gallery with many beautiful works of art <br> in different styles.</p>
+                                <p class="hover-text" data-tooltip="Tour of an art gallery with many beautiful works of art in different styles." style="font-size: 16px; margin-top: -2px;font-family: 'Bradley Hand', cursive;">Tour of an art gallery with many beautiful works of art <br> in different styles.</p>
                                 <video autoplay="autoplay" controls="controls" loop="loop" muted="muted"
                                     src="./results/t2v_long/126.mp4" style="border: 1px solid black;width:300px"
                                     type="video/mp4"></video>
@@ -420,6 +421,42 @@
     <script src="images/webflow.fd002feec.js"></script>
 
     <!-- Import the component -->
+    <style>
+        .hover-text {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hover-text:hover::after {
+            content: attr(data-tooltip); /* Use the data-tooltip attribute */
+            position: absolute;
+            left: 50%; /* Center the tooltip horizontally */
+            transform: translateX(-50%);
+            top: -10px; /* Adjust placement above the text */
+            width: 300px; /* Fixed width */
+            max-width: calc(100vw - 20px); /* Ensure it fits within the viewport */
+            background: #333; /* Dark background for tooltip */
+            color: #fff; /* White text */
+            font-size: 16px;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 4px;
+            opacity: 1;
+            visibility: visible;
+            white-space: normal; /* Allow multiline text */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+            z-index: 99999; /* Ensure tooltip is on top */
+        }
+
+        .column {
+            position: relative;
+            overflow: visible; /* Ensure the tooltip isn't clipped */
+        }
+        .container, .row {
+            overflow: visible
+        }
+
+    </style>
 
 
 
